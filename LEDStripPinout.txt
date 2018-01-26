@@ -1,0 +1,3 @@
+Pin 17 = Blue
+Pin 27 = Green
+Pin 22 = Red
