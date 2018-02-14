@@ -1,10 +1,13 @@
 #! /usr/bin/python
 import ledcontrol as led
+from datetime import datetime
 
 def off():
+    print(datetime.now().isoformat(), "Running cleanup.")
     led.cleanup()
 
 def off_now():
+    print(datetime.now().isoformat(), "Running immediate cleanup.")
     led.GPIO.cleanup()
 
 # Detect if being run from command line, as command in itself
