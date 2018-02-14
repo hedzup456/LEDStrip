@@ -7,12 +7,13 @@ import off as fuck
 
 def main():
     start = dt.datetime.now()
-    end = start + dt.timedelta(minutes = 1) # Long term strobing!
-    print("It is {0.hour:02d}:{0.minute:02d} on {0.year:04d}-{0.month:02d}-{0.day:02d}.".format(start))
+    end = start + dt.timedelta(minutes = 2) # Long term strobing!
+
+    print(start, "Started strobing.")
     while dt.datetime.now() < end:
         led.randomStrobe(5)
-    print("Strobing complete")
-    print("Time is {0.hour:02d}:{0.minute:02d}".format(dt.datetime.now()))
+
+    print(dt.datetime.now(), "Strobing complete. Shutting down.")
     fuck.off()
 
 if "__main__" == __name__:
